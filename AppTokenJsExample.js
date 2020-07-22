@@ -96,7 +96,7 @@ function addDocument(applicantId) {
   var form = new FormData();
   form.append('metadata', JSON.stringify(metadata));
   var content = fs.readFileSync(filePath); 
-  form.append('content', content, filePath); //if i try to append pic, server returns signature mismatch but everything fine with only metadata
+  form.append('content', content, filePath);
 
   var headers = {
     'Accept': 'application/json',
